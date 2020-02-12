@@ -1,8 +1,11 @@
-viersion: 2.1
+viersion: 2.0
 jobs: 
   build:
     docker:
-      - image: circleci/node:4.8.2
+      - image: alpine:3.7
     steps:
-      - checkout
-      - run: echo "hello world!"
+      - run:
+        name: 最初の一歩
+        command: |
+          echo 'Hello World!'
+          echo 'This is the delivery pipeline'
